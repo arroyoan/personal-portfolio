@@ -33,6 +33,11 @@ header {
   background-color: white;
 }
 
+.nav__logo a {
+  color: black;
+  text-decoration: none;
+}
+
 .nav__container {
   width: 100%;
   display: flex;
@@ -184,7 +189,7 @@ header {
 }
 
 .project__header {
-  padding-bottom: 1.5rem;
+  padding-bottom: 3rem;
   padding-top: 4rem;
   font-size: 2rem;
 }
@@ -227,7 +232,7 @@ header {
 }
 
 .card__title {
-  font-size: 1.15rem;
+  font-size: 24px;
   padding-bottom: 4px;
   position: relative;
   width: max-content;
@@ -251,7 +256,7 @@ header {
 }
 
 .card__body {
-  font-size: 1rem;
+  font-size: 16px;
   padding-top: 2rem;
   padding-bottom: 2.5rem;
   color: white;
@@ -271,6 +276,7 @@ header {
 .card__links a {
   text-decoration: none;
   color: white;
+  font-size: 20px;
 }
 .card__links a:hover {
   cursor: pointer;
@@ -283,7 +289,7 @@ header {
 }
 
 .card:hover > .card__overlay {
-  opacity: 0.6;
+  opacity: 0.7;
   transition: 300ms ease-in;
 }
 
@@ -292,7 +298,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 3rem;
-  padding-top: 2rem;
-  background-color: thistle;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+  background-color: white;
 }
