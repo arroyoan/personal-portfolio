@@ -1,0 +1,289 @@
+:root {
+  /* VARIABLES FOR COLORS AND FONTS */
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Archivo", sans-serif;
+}
+
+/* NavBar */
+header {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  position: fixed;
+  width: 100%;
+  box-shadow: 0px 1px 6px -3px black;
+  z-index: 3;
+  background-color: white;
+}
+
+.nav__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem 2rem;
+}
+
+.nav__links {
+  list-style: none;
+}
+
+.nav__links li {
+  display: inline-block;
+}
+
+.nav__links li:not(li:first-child) {
+  padding-left: 0.75rem;
+}
+
+.nav__links a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav__links a:hover,
+.nav__links a:focus {
+  color: blue;
+}
+
+/* Splash Screen */
+.splash {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 14.5rem 0;
+  padding-bottom: 10rem;
+}
+
+.jumbo__text h1 {
+  font-size: 6rem;
+  padding-bottom: 1rem;
+}
+
+.jumbo__sub {
+  width: 40%;
+}
+
+/* About Me */
+.about__container {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  padding: 4rem 4rem;
+  padding-top: 5rem;
+}
+
+/* Details Section */
+
+.details__img {
+  position: relative;
+}
+
+.details__img::before {
+  content: "THAT'S ME!";
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  transform: rotate(-30deg);
+  font-size: 1.5rem;
+}
+
+.details__img img {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* .details__info {
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.details__header h6 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.05;
+  padding-bottom: 0.5rem;
+}
+
+.details__list {
+  list-style: none;
+  line-height: 2;
+}
+
+.details__list li {
+  display: flex;
+  align-items: center;
+}
+
+.details__list i {
+  color: black;
+  font-size: 1.25rem;
+  padding-right: 0.75rem;
+}
+
+.details__list p {
+  font-size: 18px;
+} */
+
+/* About right Section */
+.about {
+  width: 60%;
+  padding-left: 1rem;
+}
+
+.about__header {
+  font-size: 3rem;
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+
+.about__content {
+  width: 95%;
+  padding: 0.5rem;
+}
+
+.about__content p {
+  font-size: 18px;
+  line-height: 2;
+}
+
+/* Projects  */
+.project__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 4rem;
+  padding-top: 1rem;
+}
+
+.project__header {
+  padding-bottom: 1.5rem;
+  padding-top: 4rem;
+  font-size: 2rem;
+}
+
+/* Grid for cards */
+.card__grid {
+  display: grid;
+  width: 54%;
+  grid-template-columns: repeat(auto-fit, minmax(29ch, 1fr));
+}
+
+.card {
+  --padding: 1.5rem;
+  padding: var(--padding);
+  position: relative;
+  z-index: 1;
+}
+
+.card img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.card__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+  transition: 300ms ease-in;
+}
+
+.card__title {
+  font-size: 1.15rem;
+  padding-bottom: 4px;
+  position: relative;
+  width: max-content;
+  max-width: 100%;
+  color: white;
+  opacity: 0;
+  z-index: 3;
+}
+
+.card__title::after {
+  position: absolute;
+  content: "";
+
+  left: calc(var(--padding) * -1);
+  bottom: 0;
+
+  width: calc(100% + var(--padding));
+  height: 4px;
+
+  background-color: white;
+}
+
+.card__body {
+  font-size: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2.5rem;
+  color: white;
+  position: relative;
+  opacity: 0;
+  z-index: 3;
+}
+
+.card__links {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  opacity: 0;
+  z-index: 3;
+}
+
+.card__links a {
+  text-decoration: none;
+  color: white;
+}
+.card__links a:hover {
+  cursor: pointer;
+  color: blue;
+}
+
+.card:hover > *:not(.card__overlay) {
+  opacity: 1;
+  transition: 300ms ease-in;
+}
+
+.card:hover > .card__overlay {
+  opacity: 0.6;
+  transition: 300ms ease-in;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3rem;
+  padding-top: 2rem;
+  background-color: thistle;
+}
