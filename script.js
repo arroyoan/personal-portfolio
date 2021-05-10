@@ -1,10 +1,10 @@
 // all the elements in the element that are needed
-const aboutSection = document.querySelector('#splash');
-const header = document.querySelector('header');
+const aboutSection = document.querySelector('#about');
+const navLogo = document.querySelector('.nav__logo');
 
 // These are the options for the intersection observer
 const options ={
-  threshold:0.5
+  threshold:0.3
 }
 
 // helper functions
@@ -13,9 +13,9 @@ const options ={
 const navChange = (entries,observer)=>{
  entries.forEach(entry => {
    if(entry.isIntersecting){
-     header.classList.remove("changeNav") ;
+     navLogo.classList.remove("changeNav") ;
    } else{
-     header.classList.add('changeNav');
+     navLogo.classList.add('changeNav');
    }
  });
 }
