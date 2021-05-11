@@ -8,6 +8,7 @@
 
   --main-background: hsl(42, 93%, 95%);
   --secondary-background: hsl(20, 68%, 85%);
+  --footer-background: hsl(224, 100%, 17%);
 
   /* neutrals */
 
@@ -31,7 +32,7 @@ body {
 
 /* NavBar */
 header {
-  padding: 0 7rem;
+  padding: 0 3rem;
   padding-top: 2rem;
 
   position: fixed;
@@ -78,7 +79,7 @@ header {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
 }
 
 .nav__links {
@@ -90,7 +91,7 @@ header {
 }
 
 .nav__links li:not(li:first-child) {
-  padding-left: 0.75rem;
+  padding-left: 0.5rem;
 }
 
 .nav__links a {
@@ -117,7 +118,7 @@ header {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  width: 65%;
+  width: 69%;
   padding: 4rem 4rem;
   padding-top: 5rem;
 }
@@ -292,26 +293,35 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 4rem;
-  padding-top: 4rem;
-  background-color: white;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  background-color: var(--main-background);
 }
 
-/* .details__info {
+.details__info {
   padding-top: 1rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.details__header h6 {
-  font-size: 1.5rem;
-  font-weight: 400;
+.details__info > * {
+  padding: 0.5rem 1rem;
+}
+
+.details__header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
   line-height: 1.05;
-  padding-bottom: 0.5rem;
+  color: var(--header-text);
 }
 
 .details__list {
   list-style: none;
   line-height: 2;
+  display: flex;
 }
 
 .details__list li {
@@ -320,11 +330,17 @@ footer {
 }
 
 .details__list i {
-  color: black;
-  font-size: 1.25rem;
+  color: var(--header-text);
+  font-size: 1.5rem;
   padding-right: 0.75rem;
 }
 
-.details__list p {
+.details__list li i:hover {
+  color: var(--accent-color);
+}
+
+.details__info p {
+  padding-top: 1rem;
   font-size: 18px;
-} */
+  color: var(--paragraph-text);
+}
