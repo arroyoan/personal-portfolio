@@ -7,8 +7,8 @@
   --circle-text: hsl(224, 100%, 17%);
 
   --main-background: hsl(42, 93%, 95%);
-  --secondary-background: hsl(20, 68%, 85%);
-  --footer-background: hsl(224, 100%, 17%);
+  --secondary-background: hsl(15, 33%, 2%);
+  --footer-background: hsl(42, 93%, 95%);
 
   /* neutrals */
 
@@ -136,7 +136,7 @@ header {
   top: 5px;
   transform: rotate(-30deg);
   font-size: 1.5rem;
-  color: var(--accent-color);
+  color: var(--header-text);
   font-weight: bold;
 }
 
@@ -177,14 +177,14 @@ header {
   justify-content: center;
   align-items: center;
   padding-bottom: 4rem;
-  padding-top: 1rem;
-  background-color: var(--secondary-background);
+  padding-top: 0.5rem;
+  background-color: var(--circle-background);
   min-height: 100vh;
 }
 
 .project__header {
   padding-bottom: 3rem;
-  padding-top: 4rem;
+  padding-top: 3rem;
   font-size: 2rem;
   color: var(--header-text);
 }
@@ -295,7 +295,7 @@ footer {
   align-items: center;
   padding-bottom: 2rem;
   padding-top: 2rem;
-  background-color: var(--main-background);
+  background-color: var(--footer-background);
 }
 
 .details__info {
